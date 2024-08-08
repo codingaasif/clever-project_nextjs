@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/globals.css */
+/* In your main CSS file or the component file */
+
+.active-link {
+  position: relative;
+  color: #a855f7;
+}
+
+.active-link::before {
+  content: "•";
+  position: absolute;
+  left: -1.5rem;
+  color: #a855f7;
+}
+
+/* Swiper container4 */
+
+.active-card {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoomed {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-container {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.carousel-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-class {
+  border-radius: 0.75rem;
+}
+
+.split-bg {
+  width: 100%;
+  height: auto;
+  min-height: 750px;
+  background: linear-gradient(to bottom, black 375px, white 375px);
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .split-bg {
+    height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .split-bg {
+    height: auto;
+    background: linear-gradient(to bottom, black 74%, white 26%);
+  }
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
